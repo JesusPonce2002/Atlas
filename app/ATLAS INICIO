@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Menú de hamburguesa (si lo necesitas, puedes agregar funcionalidad luego) -->
+    <ImageView
+        android:id="@+id/menu_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Menu icon"
+        app:srcCompat="@drawable/ic_menu"  <!-- Cambia esto por un ícono de menú -->
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Título: "Bienvenido, coach" -->
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido, coach"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp" />
+
+    <!-- Logotipo (imagen del triángulo "ATLAS") -->
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="Logo Atlas"
+        app:srcCompat="@drawable/logo_atlas"  <!-- Cambia esto por tu recurso de imagen -->
+        app:layout_constraintTop_toBottomOf="@id/welcome_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Texto promocional -->
+    <TextView
+        android:id="@+id/promo_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="¿Buscas proteína, pre-entrenos, suplementos, aminoácidos y demás para tu día a día?"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:lineSpacingExtra="4dp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/logo_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- Enlaces (MDNLab y OptimumNutrition) -->
+    <LinearLayout
+        android:id="@+id/links_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/promo_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/mdnlab_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MDNLab"
+            android:textColor="#0000FF"
+            android:clickable="true"
+            android:textSize="14sp"
+            android:layout_marginEnd="8dp"
+            android:autoLink="web" />
+
+        <TextView
+            android:id="@+id/optimum_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="| OptimumNutrition"
+            android:textColor="#0000FF"
+            android:clickable="true"
+            android:textSize="14sp"
+            android:autoLink="web" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
